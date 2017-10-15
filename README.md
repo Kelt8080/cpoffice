@@ -3,7 +3,7 @@
 
 # Introduction
 
-一個系統是採用windows chrome為主體架構，結合google driver線上免費服務製作出來的個人雲端辦公平台
+這個系統是採用windows chrome為主體架構，結合google driver線上免費服務製作出來的個人雲端辦公平台
 
 
 ## Getting Started
