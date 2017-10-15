@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile UI</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/hover.css" />
+    <link type="text/css" rel="stylesheet" href="css/idangerous.swiper.css"/>
+    <link rel="stylesheet" href="weather_icons_master/css/weather-icons.min.css" />
+    <script src="js/web-animations.min.js"></script>
+    <script src="js/animatelo.min.js"></script>
+</head>
+<body onload="body_initial();">
+  
+  
+
+
+    <div class="container">
+      <div class="app" style="background-image: url('https://kelt8080.github.io/public/image/background/mobile_bg_cpoffice_20171013.jpg');width:380px;height:670px;">
+        <div class="head clearfix">
+          <span class="messages-notification">
+            <ul class="m_message">
+  						<li>
+  							<div class="m_menu">
+  								<span id="m_products">
+  								  <a href="#" title="雲端辦公室"><img src="https://kelt8080.github.io/public/image/app/cpoffice.png" width="20" height="20"></a>
+  								</span>	
+  							</div>
+  						</li>
+  					</ul>
+  					<ul class="p_message">
+  						<li>
+  							<div class="p_menu">
+  								<span id="p_projects" class="hvr-float-shadow">
+  								  <a href="#" title="專案" id="p_projects_a" onclick="animate_active('widget_projects','專案');">cpoffice</a>
+  								</span>	
+  							</div>
+  						</li>
+  					</ul>
+
+          </span>
+
+          <span class="create-new">
+            <i class="weather">
+                 <span class="weather">
+                    <span id="dt"></span>
+                  </span>
+            </i>
+          </span>
+        </div>
+        <div class="search-bar" style="display: none;">
+          <i onClick="speech_onoff();" class="fa fa-search"></i>
+          <input type="text" id="search_text" class="ip-search" placeholder="請輸入命令">
+          <button type="submit" id="speech_icon"  onClick="speech_onoff();"></button>
+        </div>
+
+        <div class="title-bar">
+          <p id="mobile_page_title">主控台</p>
+        </div>
+
+        <div class="body">
+          <div name="mobile_desktop" id="mobile_desktop" class="swiper-container swiper-parent">
+              <div class="swiper-wrapper">
+              
+              <!--Menu page-->
+              <div class="swiper-slide sliderbg_menu">
+                    <div class="swiper-container swiper-nested">
+                             <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                            <div class="slide-inner">
+                                              <div class="widget-apps-desktop clearfix">
+                                                <ul id="mobile_desktop_ui1">
+                                                  <li>
+                                                    <a href="#" class="hvr-grow-shadow" onclick="changeWin('https://mail.google.com/mail/u/0/#inbox');"><img src="https://kelt8080.github.io/public//image/app/inbox.png" width="20" height="20"></a>
+                                                    <p>Inbox</p>
+                                                  </li>
+                                                  <li>
+                                                    <a href="#"  class="hvr-grow-shadow" onclick="changeWin('https://app.fullcontact.com/');"><img src="https://kelt8080.github.io/public//image/app/fullcontact.png" width="20" height="20"></a>
+                                                    <p>Fullcontact</p>
+                                                  </li>
+                                                  <li>
+                                                    <span class="messages"><span id="gtd_n_3" class="count">0</span></span>
+                                                    <a href="#" id="gtd_3" class="hvr-grow-shadow"  onclick="changeWin('https://docs.google.com/spreadsheets/d/1GlE1DzvpXppOtMvdjXKsnhaDjbiU7GbiSlauWZ5E6wk/edit#gid=1433338295'); count_spreadsheet_cycle('1GlE1DzvpXppOtMvdjXKsnhaDjbiU7GbiSlauWZ5E6wk','7','gtd_n_3');"><img src="https://kelt8080.github.io/public/image/app/spreadsheet.png" width="20" height="20"></a>
+                                                    <p>FAQ</p>
+                                                  </li>
+                                                  
+                                                  <li>
+                                                    <a href="#" class="hvr-grow-shadow"  onclick="changeWin('http://www.homestyler.com/designer');"><img src="https://kelt8080.github.io/public/image/app/homestyler.png" width="20" height="20"></a>
+                                                    <p>homestyler</p>
+                                                  </li>
+                                                  <li>
+                                                    <a href="#" class="hvr-grow-shadow"  onclick="changeWin('https://cad.onshape.com/documents?filter=recently-opened&column=modifiedAt&order=desc');"><img src="https://kelt8080.github.io/public/image/app/onshape.png" width="20" height="20"></a>
+                                                    <p>onshaper</p>
+                                                  </li>
+                                                  <li>
+                                                    <a href="#" class="hvr-grow-shadow"  onclick="changeWin('https://myhub.autodesk360.com/ue2938b2a/g/projects/D2016043030600676/data/dXJuOmFkc2sud2lwcHJvZDpmcy5mb2xkZXI6Y28uRUNpaWpyblZUdG1XWHotTVZ6NUgyUQ/dXJuOmFkc2sud2lwcHJvZDpkbS5saW5lYWdlOmlnTWx3QWtEU1g2M29BREdpLW9kYWc?show=viewer');"><img src="https://kelt8080.github.io/public/image/app/a360.png" width="20" height="20"></a>
+                                                    <p>a360</p>
+                                                  </li>
+                                                  <li>
+                                                    <a href="#" class="hvr-grow-shadow"  onclick="changeWin('https://www.vectary.com/engine/?model=71f92fc5-8bd5-4c12-af27-1cfbc653a2da');"><img src="https://kelt8080.github.io/public/image/app/vectary.png" width="20" height="20"></a>
+                                                    <p>vectary</p>
+                                                  </li>
+                                                  <li>
+                                                    <a href="#" class="hvr-grow-shadow"  onclick="changeWin('readme/index.html');"><img src="https://kelt8080.github.io/public/image/app/readme.png" width="20" height="20"></a>
+                                                    <p>使用說明</p>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                           </div>
+                                   </div>
+                             </div>
+                            <div class="swiper-scrollbar"></div>
+                    </div> 
+                </div>
+                
+              <!--Page 1 content-->
+              <div class="swiper-slide sliderbg">
+                <div class="swiper-container swiper-nested1">
+                         <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                        <div class="slide-inner">
+                                            <div class="widget-apps-desktop clearfix">
+                                              <ul id="mobile_desktop_ui2">
+                                                <li>
+                                                  <a href="#" class="hvr-grow-shadow" onclick="changeWin('https://trello.com/');"><img src="https://kelt8080.github.io/public/image/app/trello.png" width="20" height="20"></a>
+                                                  <p>trello</p>
+                                                </li>
+                                                <li>
+                                                  <a href="#" class="hvr-grow-shadow"  onclick="changeWin('https://calendar.google.com/calendar/render');"><img src="https://kelt8080.github.io/public/image/app/calendar.png" width="20" height="20"></a>
+                                                  <p>行事曆</p>
+                                                </li>
+                                                <li>
+                                                  <a href="#" class="hvr-grow-shadow" onclick="changeWin('https://www.inoreader.com/all_articles');"><img src="https://kelt8080.github.io/public/image/app/inoreader.png" width="20" height="20"></a>
+                                                  <p>Inoreader</p>
+                                                </li>
+                                                <li>
+                                                  <a href="#" class="hvr-grow-shadow"  onclick="changeWin('https://keep.google.com/u/0/');"><img src="https://kelt8080.github.io/public/image/app/google_keep.png" width="20" height="20"></a>
+                                                  <p>google_keep</p>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                           </div>
+                              </div>
+                        </div>
+                        <div class="swiper-scrollbar1"></div>
+               </div>
+               </div>
+                
+              <!--Page 2 content-->
+              <div class="swiper-slide sliderbg">
+                <div class="swiper-container swiper-nested2">
+                         <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                        <div class="slide-inner">
+                                            <div class="widget-apps-desktop clearfix">
+                                              <ul id="mobile_desktop_ui3">
+                                                  <li>
+                                                    <a href="#" id="works_iframe" class="hvr-grow-shadow"  onclick="changeWin('https://drive.google.com/drive/folders/0B8dWhsraFJEra0xFaXYxYVRDUG8');"><img src="https://kelt8080.github.io/public/image/app/google_driver.png" width="20" height="20"></a>
+                                                    <p>工作目錄</p>
+                                                  </li>
+                                                  <li>
+                                                    <a href="#" id="app_map_iframe" class="hvr-grow-shadow"  onclick="changeWin('https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&page=1#G0B8dWhsraFJErUTJmT1JseEE0N3c');"><img src="https://kelt8080.github.io/public/image/app/drawio.png" width="20" height="20"></a>
+                                                    <p>weather DFD</p>
+                                                  </li>
+                                                  <li>
+                                                    <a href="#" id="cloud9_iframe" title="cpoffice Dashboard" class="hvr-grow-shadow" onclick="changeWin('https://ide.c9.io/cpoffice/dashboard');"><img src="https://kelt8080.github.io/public/image/app/cloud9.png" width="20" height="20"></a>
+                                                    <p>mobile ui</p>
+                                                  </li>
+                                              </ul>
+                                            </div>
+                                           </div>
+                              </div>
+                        </div>
+                        <div class="swiper-scrollbar2"></div>
+               </div>
+               </div>
+               
+               <!--End of pages--> 
+              </div>
+
+              <div class="pagination"></div>
+          </div>  
+          
+          <div id="body_sp">
+            <iframe  name="widget_projects" id="widget_projects" src="widget_projects.html"  style="display: none; width: 380px;height: 530px;position: relative; text-align: center;" frameborder="0" scrolling="no" sandbox="allow-same-origin allow-popups allow-forms allow-scripts" seamless="" allowTransparency="true">Loading…</iframe>
+            <iframe  name="widget_projects_ui" id="widget_projects_ui" src="display: none;"   style="display: none; width: 380px;height: 530px;position: relative; text-align: center;" frameborder="0" scrolling="no" sandbox="allow-same-origin allow-popups allow-forms allow-scripts" seamless="" allowTransparency="true">Loading…</iframe>
+            <iframe  name="mobile_search" id="mobile_search" src="mobile_search.html"        style="display: none; width: 380px;height: 530px;position: relative; text-align: center;" frameborder="0" scrolling="no" sandbox="allow-same-origin allow-popups allow-forms allow-scripts" seamless="" allowTransparency="true">Loading…</iframe>
+            <iframe  name="mobile_nb" id="mobile_nb" src="mobile_nb.html"        style="display: none; width: 380px;height: 530px;position: relative; text-align: center;" frameborder="0" scrolling="no" sandbox="allow-same-origin allow-popups allow-forms allow-scripts" seamless="" allowTransparency="true">Loading…</iframe>
+            <iframe  name="mobile_cloud" id="mobile_cloud" src="mobile_cloud.html"        style="display: none; width: 380px;height: 530px;position: relative; text-align: center;" frameborder="0" scrolling="no" sandbox="allow-same-origin allow-popups allow-forms allow-scripts" seamless="" allowTransparency="true">Loading…</iframe>
+            <iframe  name="mobile_realtime" id="mobile_realtime" src="mobile_realtime.html"        style="display: none; width: 380px;height: 530px;position: relative; text-align: center;" frameborder="0" scrolling="no" sandbox="allow-same-origin allow-popups allow-forms allow-scripts" seamless="" allowTransparency="true">Loading…</iframe>
+          </div>
+        </div>
+        
+        <div class="swip_pages">
+          <span class="pre_page" onclick="iframe_swipePrev();"><i class="fa fa-chevron-left"></i></span>
+          <span class="next_page" onclick="iframe_swipeNext();"><i class="fa fa-chevron-right"></i></span>
+        </div>
+
+        <div id="footer_sp" class="footer">
+          <ul>
+            <li onclick="animate_active('mobile_search','Search');" class="hvr-underline-reveal">
+              <a href="#"  onclick="animate_active('mobile_setup','Search');"><i class="fa fa-search"></i></a>
+            </li>
+            <li onclick="animate_active('mobile_nb','主機程式');" class="hvr-underline-reveal">
+              <a href="#"  onclick="animate_active('mobile_nb','主機程式');"><i class="fa fa-desktop"></i></a>
+            </li>
+            <li onclick="animate_active('mobile_desktop','主控台');" class="hvr-underline-reveal">
+              <a href="#" id="control_home" onclick="animate_active('mobile_desktop','主控台'); document.getElementById('swiperto1').click();"><i class="fa fa-home"></i></a>
+            </li>            
+            <li onclick="animate_active('mobile_cloud','雲端協作');" class="hvr-underline-reveal">
+              <a href="#"  onclick="animate_active('mobile_cloud','雲端協作');"><i class="fa fa-cloud"></i></a>
+            </li>
+            <li onclick="animate_active('mobile_realtime','即時系統');" class="hvr-underline-reveal">
+              <a href="#"  onclick="animate_active('mobile_realtime','即時系統');"><i class="fa fa-simplybuilt"></i></a>
+            </li>
+          </ul>
+          </div>
+
+      </div>
+    </div>
+
+
+  <div id="hide_function" style="display: none;">
+    <li><a href="#" id="swiperto1" onclick="swiperParent.swipeTo(0);" style="display:none;"></a></li>
+    <li><a href="#" id="swiperto2" onclick="swiperParent.swipeTo(1);" style="display:none;"></a></li>
+    <li><a href="#" id="swiperto3" onclick="swiperParent.swipeTo(2);" style="display:none;"></a></li>
+    <a href="#" id="mobile_close"  onclick="window.location.href = '/closekiosk';">關閉現有視窗或iframe</a>
+    <a href="#" id="control_close"  onclick="closeWin();">關閉現有工作視窗</a>
+    <a href="localexplorer:D:\Cloudshare\Dropbox\local\lnk\alt_f4_2.vbs" id="terminate_window">強制關閉工作視窗</a>
+    <a href="#" id="close_system"  onclick="document.getElementById('control_close').click(); document.getElementById('mobile_close').click();">關閉系統</a>
+  </div>
+
+
+
+    <script async type="text/javascript" src="js/layout.js"></script>
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/idangerous.swiper-2.1.min.js"></script>
+    <script type="text/javascript" src="js/code.js"></script>
+
+
+  <script type="text/javascript">
+  //初始化
+  newWin('https://mail.google.com/mail/u/0/#inbox');
+
+  function body_initial() {
+    setTimeout(function(){
+	      count_spreadsheet_once('1GlE1DzvpXppOtMvdjXKsnhaDjbiU7GbiSlauWZ5E6wk','7','gtd_n_3');
+	    }, 900);
+	  setTimeout(function(){
+	      count_spreadsheet_once('1hJhPnA6XTjPyhQpv57-wsuZ_0ddKn-DwClt_OmKwSFo','7','gtd_n_4');
+	    }, 4000);
+    
+  }
+
+  
+  var myWindow;
+  function newWin(value) {
+    myWindow = window.open('', '', 'location=no,menubar=no,status=no,top=0,left=380,width=1150,height=880');
+    myWindow.resizeTo(1165, 880);  
+    myWindow.moveTo(385, 0);  
+    myWindow.location.href=value;
+    myWindow.focus(); 
+  }
+
+
+  
+  
+    </script>
+    
+ 
+ 
+    
+</body>
+</html>

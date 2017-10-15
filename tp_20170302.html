@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile UI</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style_desktop.css" />
+    <link rel="stylesheet" href="css/hover.css" />
+    <link type="text/css" rel="stylesheet" href="css/idangerous.swiper.css"/>
+
+</head>
+<body  style="background-color:transparent">
+
+ 
+<div class="app">
+<div class="body">
+  
+  <div class="swiper-container swiper-parent">
+    <div class="swiper-wrapper">
+    
+<!--Menu page-->
+      <div class="swiper-slide sliderbg_menu">
+          <div class="swiper-container swiper-nested">
+                   <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                                  <div class="slide-inner">
+
+          <div class="widget-apps-desktop clearfix">
+            <ul>
+              <li>
+                <a href="#" class="hvr-grow-shadow" onclick="window.top.changeWin('https://drive.google.com/drive/folders/0BzndhDL_4E_adUZlWUdlaWstS00');"><img src="https://kelt8080.github.io/public/image/app/google_driver.png" width="20" height="20"></a>
+                <p>專案目錄</p>
+              </li>
+              <li>
+                <a href="#" class="hvr-grow-shadow" onclick="window.top.changeWin('https://docs.google.com/spreadsheets/d/1dx_3oD7ed-Jc-STIyN1ky503Zli0pJrjCMiW78470mo/edit#gid=2093023431');"><img src="https://kelt8080.github.io/public/image/app/spreadsheet.png" width="20" height="20"></a>
+                <p>api</p>
+              </li>
+              <li>
+                <a href="#" class="hvr-grow-shadow" onclick="window.top.changeWin('https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1#G0B1uACDfljAQdcGdBZTNZOG5kZnM');"><img src="https://kelt8080.github.io/public/image/app/drawio.png" width="20" height="20"></a>
+                <p>DFD</p>
+              </li>
+              <li>
+                <a href="#" class="hvr-grow-shadow" onclick="window.top.changeWin('https://ide.c9.io/mit001/tp_20170302');"><img src="https://kelt8080.github.io/public/image/app/cloud9.png" width="20" height="20"></a>
+                <p>cloud9</p>
+              </li>
+              <li>
+                <a href="#" class="hvr-grow-shadow" onclick="window.top.changeWin('https://github.com/Kelt8080/voice_search');"><img src="https://kelt8080.github.io/public/image/app/github.png" width="20" height="20"></a>
+                <p>github</p>
+              </li>
+            </ul>
+          </div>
+                                 </div>
+                         </div>
+                   </div>
+                  <div class="swiper-scrollbar"></div>
+          </div> 
+      </div>
+      
+
+
+     <!--End of pages--> 
+
+    </div>
+    
+
+    <div class="pagination"></div>
+  </div>  
+  
+
+
+        </div>
+
+
+      </div>
+
+<script src="js/jquery-2.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/idangerous.swiper-2.1.min.js"></script>
+<script type="text/javascript" src="js/code.js"></script>
+
+
+<script type="text/javascript">
+    var mobileWindow;
+    function change_mobile(value) {
+      window.parent.$('#control_close').click();
+      setTimeout(function(){
+        mobileWindow = window.open('', '_blank', 'location=no,menubar=no,status=no,top=0,left=0,width=380,height=880');
+        mobileWindow.resizeTo(380, 880);  
+        mobileWindow.moveTo(0, 0);  
+        mobileWindow.location.href = value;
+        mobileWindow.focus(); 
+      }, 300);
+	    setTimeout(function(){
+        window.parent.$('#mobile_close').click();
+	    }, 1000);
+    }
+    
+    
+</script>
+
+
+
+
+    
+</body>
+</html>
