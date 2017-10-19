@@ -5,18 +5,22 @@
     <title>Mobile UI</title>
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/devices_nexus5.css" />
     <link rel="stylesheet" href="css/hover.css" />
     <link type="text/css" rel="stylesheet" href="css/idangerous.swiper.css"/>
     <link rel="stylesheet" href="weather_icons_master/css/weather-icons.min.css" />
     <script src="js/web-animations.min.js"></script>
     <script src="js/animatelo.min.js"></script>
 </head>
-<body onload="body_initial();">
+<body onload="body_initial();" style="overflow:hidden;">
   
-  
-
-
     <div class="container">
+    <div class="marvel-device nexus5">
+      			<div class="top-bar"></div>
+			<div class="sleep"></div>
+			<div class="volume"></div>
+			<div class="camera"></div>
+			<div class="screen">
       <div class="app" style="background-image: url('https://kelt8080.github.io/public/image/background/mobile_bg_cpoffice_20171013.jpg');width:380px;height:670px;">
         <div class="head clearfix">
           <span class="messages-notification">
@@ -218,7 +222,10 @@
           </div>
 
       </div>
+			</div>
     </div>
+    </div>
+
 
 
   <div id="hide_function" style="display: none;">
@@ -258,7 +265,7 @@
   var myWindow;
   function newWin(value) {
     myWindow = window.open('', '', 'location=no,menubar=no,status=no,top=0,left=380,width=1150,height=880');
-    myWindow.resizeTo(1165, 880);  
+    myWindow.resizeTo(window.screen.width-350, window.screen.height);  
     myWindow.moveTo(385, 0);  
     myWindow.location.href=value;
     myWindow.focus(); 

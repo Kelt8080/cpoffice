@@ -85,7 +85,7 @@
       window.parent.$('#control_close').click();
       setTimeout(function(){
         mobileWindow = window.open('', '_blank', 'location=no,menubar=no,status=no,top=0,left=0,width=380,height=880');
-        mobileWindow.resizeTo(380, 880);  
+        mobileWindow.resizeTo(350, window.screen.height);  
         mobileWindow.moveTo(0, 0);  
         mobileWindow.location.href = value;
         mobileWindow.focus(); 

@@ -34,10 +34,10 @@
   var leftWindow;
   function leftWinfunction() {
     leftWindow = window.open('', '', 'location=no,menubar=no,status=no,top=0,left=0,width=100,height=100');
-    leftWindow.resizeTo(window.screen.width*0.25, window.screen.height);  
+    leftWindow.resizeTo(350, window.screen.height);  
     leftWindow.moveTo(0, 0);  
     leftWindow.location.href='mobile_ui.html';
-    leftWindow.focus(); 
+    //leftWindow.focus(); 
     setTimeout(function(){
       window.open('', '_self', '');
       window.close();

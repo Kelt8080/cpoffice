@@ -2,8 +2,8 @@
 
 
 # Introduction
-這個系統是採用windows chrome為主體架構，結合google driver線上免費服務製作出來的個人雲端辦公平台。   
-效果展示:[**https://www.youtube.com/watch?v=lsnKTNXf_ho ▸**](https://www.youtube.com/watch?v=lsnKTNXf_ho)   
+
+這個系統是採用windows chrome為主體架構，結合google driver線上免費服務製作出來的個人雲端辦公平台
 
 
 ## Getting Started
@@ -15,6 +15,7 @@
 
 ### vision.4
 * 製作手機操作介面
+* 新增語音google搜尋
 
 ### vision.3
 * 加入iframe支援機制
