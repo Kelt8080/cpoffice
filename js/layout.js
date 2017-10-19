@@ -47,63 +47,25 @@
     
 
     function iframe_swipePrev() {
-      switch(activer_iframe_control){
-                    case "widget_projects":
-                      window.frames['widget_projects'].swiperParent.swipePrev();
-                      break; 
-                    case "mobile_search":
-                      window.frames['mobile_search'].swiperParent.swipePrev();
-                      break; 
-                    case "mobile_desktop":
-                        swiperParent.swipePrev();
-                        break; 
-                    case "mobile_nb":
-                      window.frames['mobile_nb'].swiperParent.swipePrev();
-                      break; 
-                    case "mobile_cloud":
-                      window.frames['mobile_cloud'].swiperParent.swipePrev();
-                      break; 
-                    case "mobile_realtime":
-                      window.frames['mobile_realtime'].swiperParent.swipePrev();
-                      break; 
-                    //專案部分
-                    case "widget_projects_ui":
-                      window.frames['widget_projects_ui'].swiperParent.swipePrev();
-                      break; 
-                    default: 
-                        swiperParent.swipePrev();
-                        break; 
-                    }
+      if(activer_iframe_control=='mobile_products'){window.frames['mobile_products'].swiperParent.swipePrev();}
+      if(activer_iframe_control=='widget_projects'){window.frames['widget_projects'].swiperParent.swipePrev();}
+      if(activer_iframe_control=='mobile_search'){window.frames['mobile_search'].swiperParent.swipePrev();}
+      if(activer_iframe_control=='mobile_desktop'){swiperParent.swipePrev();}
+      if(activer_iframe_control=='mobile_nb'){window.frames['mobile_nb'].swiperParent.swipePrev();}
+      if(activer_iframe_control=='mobile_cloud'){window.frames['mobile_cloud'].swiperParent.swipePrev();}
+      if(activer_iframe_control=='mobile_realtime'){window.frames['mobile_realtime'].swiperParent.swipePrev();}
+      if(activer_iframe_control=='widget_projects_ui'){window.frames['widget_projects_ui'].swiperParent.swipePrev();}
     }
     
     function iframe_swipeNext() {
-      switch(activer_iframe_control){
-                    case "widget_projects":
-                      window.frames['widget_projects'].swiperParent.swipeNext();
-                      break; 
-                    case "mobile_search":
-                      window.frames['mobile_search'].swiperParent.swipeNext();
-                      break; 
-                    case "mobile_desktop":
-                        swiperParent.swipeNext();
-                        break; 
-                    case "mobile_nb":
-                      window.frames['mobile_nb'].swiperParent.swipeNext();
-                      break; 
-                    case "mobile_cloud":
-                      window.frames['mobile_cloud'].swiperParent.swipeNext();
-                      break; 
-                    case "mobile_realtime":
-                      window.frames['mobile_realtime'].swiperParent.swipeNext();
-                      break; 
-                    //專案部分
-                    case "widget_projects_ui":
-                      window.frames['widget_projects_ui'].swiperParent.swipeNext();
-                      break; 
-                    default: 
-                        swiperParent.swipeNext();
-                        break; 
-                    }
+      if(activer_iframe_control=='mobile_products'){window.frames['mobile_products'].swiperParent.swipeNext();}
+      if(activer_iframe_control=='widget_projects'){window.frames['widget_projects'].swiperParent.swipeNext();}
+      if(activer_iframe_control=='mobile_search'){window.frames['mobile_search'].swiperParent.swipeNext();}
+      if(activer_iframe_control=='mobile_desktop'){swiperParent.swipeNext();}
+      if(activer_iframe_control=='mobile_nb'){window.frames['mobile_nb'].swiperParent.swipeNext();}
+      if(activer_iframe_control=='mobile_cloud'){window.frames['mobile_cloud'].swiperParent.swipeNext();}
+      if(activer_iframe_control=='mobile_realtime'){window.frames['mobile_realtime'].swiperParent.swipeNext();}
+      if(activer_iframe_control=='widget_projects_ui'){window.frames['widget_projects_ui'].swiperParent.swipeNext();}
     }
     
     
@@ -175,14 +137,14 @@
  
 
   
-    function voice_search(){
+    function windows_tran(value){
       document.getElementById('control_close').click();
       var voiceWindow;
         setTimeout(function(){
           voiceWindow = window.open('', '', 'location=no,menubar=no,status=no,top=0,left=380,width=1550,height=880');
-          voiceWindow.resizeTo(1550, 880);  
+          voiceWindow.resizeTo(window.screen.width, window.screen.height);
           voiceWindow.moveTo(0, 0);
-          voiceWindow.location.href = 'https://kelt8080.github.io/voice_search/';
+          voiceWindow.location.href = value;
           voiceWindow.focus(); 
         }, 300);
       
