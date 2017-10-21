@@ -15,7 +15,7 @@
 
 ### vision.4
 * 製作手機操作介面
-* 新增語音google搜尋
+* 新增語音google搜尋APP
 
 ### vision.3
 * 加入iframe支援機制
