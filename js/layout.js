@@ -25,7 +25,7 @@
     
     function animate_project_active(id,title,value) {
       activer_iframe_control='widget_projects_ui';
-	if(activer_iframe_control=='mobile_desktop'){document.getElementById('swiperto2').click();}
+	if(activer_iframe_control=='mobile_desktop'){document.getElementById('swiperto1').click();}
       jquery_id="#"+id
       animate_initial();
       document.getElementById('mobile_page_title').textContent= title;
